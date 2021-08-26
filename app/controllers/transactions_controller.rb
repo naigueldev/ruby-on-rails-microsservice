@@ -9,6 +9,11 @@ class TransactionsController < ApplicationController
     render json: { message: 'Arquivo inválido' }, status: 400
   end
 
+  def list
+    transactions = Transactions::List.execute
+    render json: transactions
+  end
+
   private
 
   def transaction_params
