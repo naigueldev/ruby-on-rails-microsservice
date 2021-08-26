@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2021_08_26_174737) do
   create_table "stores", force: :cascade do |t|
     t.string "owner"
     t.string "name"
-    t.decimal "amount_total"
+    t.decimal "amount_total", default: "0.0"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

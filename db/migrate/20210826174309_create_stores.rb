@@ -3,7 +3,7 @@ class CreateStores < ActiveRecord::Migration[6.1]
     create_table :stores do |t|
       t.string :owner
       t.string :name
-      t.decimal :amount_total
+      t.decimal :amount_total, :default => 0
 
       t.timestamps
     end
