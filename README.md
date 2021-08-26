@@ -1,24 +1,43 @@
-# README
+# Configuração do projeto
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Importando dados de arquivo excel
 
-Things you may want to cover:
+## Dependência
+- Docker >= v20.10.5
 
-* Ruby version
+## Projetos desenvolvidos com:
+#### Microsserviço:
+- Ruby v3.0.1
+- Rails v6.1.3.1
 
-* System dependencies
+## Executando o microsserviço:
 
-* Configuration
+Abra o terminal na raiz do projeto e entre pasta `microservice`:
 
-* Database creation
+`cd microservice`
 
-* Database initialization
+Executar comando para construir os projeto back-end:
 
-* How to run the test suite
+`sudo docker-compose build`
 
-* Services (job queues, cache servers, search engines, etc.)
+Executar o comando para inicializar:
 
-* Deployment instructions
+`sudo docker-compose up -d`
 
-* ...
+Executar o comando para criar o banco de dados:
+
+`sudo docker-compose exec api rake db:create`
+
+Executar o comando para migrar o banco de dados:
+
+`sudo docker-compose exec api rake db:migrate`
+
+Executar o comando para efetuar o pré cadastro dos tipos de transações:
+
+`sudo docker-compose exec api rake db:seed`
+
+## Rodando os testes automatizados
+
+Execute o comando:
+
+`sudo docker-compose exec api bundle exec rspec`

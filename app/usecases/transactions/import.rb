@@ -7,9 +7,7 @@ module Transactions
         end
 
         def execute
-          transaction = TransactionRepository.create(parse_file)
-          byebug
-          
+          TransactionRepository.create(parse_file)
         end
 
         def parse_file
