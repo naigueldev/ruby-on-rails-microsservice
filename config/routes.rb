@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  post '/transactions', to: 'transactions#import'
+  post '/transactions/import', to: 'transactions#import'
 end
