@@ -1,6 +1,6 @@
 # Configuração do projeto
 
-## Importando dados de arquivo excel
+## Importando dados de arquivo .txt
 
 ## Dependência
 - Docker >= v20.10.5
